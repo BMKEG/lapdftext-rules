@@ -28,11 +28,12 @@ file using the ```*.drl``` file.
         }
     }
 
-The system creates 
+The system creates three files in the ```./target/test-classes/``` subdirectory.
 
 1. An open-access ```*.xml``` file consisting of all chunks classified as non-headers and footers (including unclassified text).
 2. A directory with images for each page consisting of every block and their existing classification (with no words). 
 3. A ```*.csv``` file with all the features for all the blocks precalculated. Reconfigure this file to create rules. 
-
-
-
+ 
+**NOTE: This is intended as a vehicle of interaction.**
+Please use develop your own rule files in this project as test cases  and then issue a pull 
+request so that we can incorporate them into our system. We hope to build up a catalog.
