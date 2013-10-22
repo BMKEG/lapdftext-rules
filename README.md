@@ -5,6 +5,9 @@ A project to enable other developers to use the LA-PDFText system effectively by
 
 Examine the ```/src/test/java/edu/isi/bmkeg/lapdf/general/TestTemplate.java``` file (as shown below).
 
+This test will run the new ```edu.isi.bmkeg.lapdf.bin.DebugLapdfFeatures.main()``` command on the ```*.pdf``` 
+file using the ```*.drl``` file. 
+
     package edu.isi.bmkeg.lapdf.general;
 
     import java.io.File;
@@ -19,12 +22,17 @@ Examine the ```/src/test/java/edu/isi/bmkeg/lapdf/general/TestTemplate.java``` f
         @Test
         public void test_001() throws Exception {	
             this.runBlockifyClassifyImagify(
-	             "edu/isi/bmkeg/lapdf/makki-2010-8-e1000441.pdf", 
-		     "edu/isi/bmkeg/lapdf/general.drl"
+                     "edu/isi/bmkeg/lapdf/makki-2010-8-e1000441.pdf", 
+                     "edu/isi/bmkeg/lapdf/general.drl"
             );
         }
     }
 
+The system creates 
+
+1. An open-access ```*.xml``` file consisting of all chunks classified as non-headers and footers (including unclassified text).
+2. A directory with images for each page consisting of every block and their existing classification (with no words). 
+3. A ```*.csv``` file with all the features for all the blocks precalculated. Reconfigure this file to create rules. 
 
 
 
